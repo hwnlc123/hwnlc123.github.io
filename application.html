@@ -19,52 +19,29 @@
     <h1>Application Form</h1>
     <p>enter this and i might let u join.</p>
     
-  
-    <form action="https://formspree.io/f/mljbglvo" method="POST"></form>>
+    <!-- The form tag now wraps all inputs and points to Formspree -->
+    <form action="https://formspree.io/f/mljbglvo" method="POST">
+        
         <label for="name">full name:</label><br>
-        <input type="text" id="name" name="name" style="width: 100%; padding: 8px; margin: 8px 0;"><br><br>
+        <input type="text" id="name" name="name" style="width: 100%; padding: 8px; margin: 8px 0;" required><br><br>
 
         <label for="year">Your year:</label><br>
-        <input type="text" id="year" year="year" style="width: 100%; padding: 8px; margin: 8px 0;"><br><br>
+        <input type="text" id="year" name="year" style="width: 100%; padding: 8px; margin: 8px 0;"><br><br>
 
         <label for="house">house:</label><br>
-        <input type="text" id="house" house="house" style="width: 100%; padding: 8px; margin: 8px 0;"><br><br>
+        <input type="text" id="house" name="house" style="width: 100%; padding: 8px; margin: 8px 0;"><br><br>
 
         <label for="reason">How did you hear abt this?</label><br>
         <textarea id="reason" name="reason" rows="4" style="width: 100%; padding: 8px; margin: 8px 0;"></textarea><br><br>
                 
         <label for="snap">whats ur snap:</label><br>
-        <input type="text" id="snap" snap="snap" style="width: 100%; padding: 8px; margin: 8px 0;"><br><br>
+        <input type="text" id="snap" name="snap" style="width: 100%; padding: 8px; margin: 8px 0;"><br><br>
 
         <label for="grass">are you a grass:</label><br>
-        <input type="text" id="grass" grass="grass" style="width: 100%; padding: 8px; margin: 8px 0;"><br><br>
-
-
+        <input type="text" id="grass" name="grass" style="width: 100%; padding: 8px; margin: 8px 0;"><br><br>
 
         <button type="submit" style="padding: 10px 20px;">Submit Application</button>
     </form>
-<!-- The Success Message (Hidden by default) -->
-    <div id="successMessage" class="hidden success-box">
-        <h2>Application Submitted!</h2>
-        <p>Thank you! Your response has been recorded successfully.</p>
-    </div>
 
-    <script>
-        // Grab the form and the success message container from the page
-        const form = document.getElementById('applicationForm');
-        const successMessage = document.getElementById('successMessage');
-
-        // Listen for when the user clicks the submit button
-        form.addEventListener('submit', function(event) {
-            // Stop the page from reloading/submitting normally
-            event.preventDefault();
-
-            // Hide the form
-            form.classList.add('hidden');
-
-            // Show the success message box
-            successMessage.classList.remove('hidden');
-        });
-    </script>
 </body>
 </html>
