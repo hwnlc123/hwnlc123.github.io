@@ -43,6 +43,28 @@
 
         <button type="submit" style="padding: 10px 20px;">Submit Application</button>
     </form>
+<!-- The Success Message (Hidden by default) -->
+    <div id="successMessage" class="hidden success-box">
+        <h2>Application Submitted!</h2>
+        <p>Thank you! Your response has been recorded successfully.</p>
+    </div>
 
+    <script>
+        // Grab the form and the success message container from the page
+        const form = document.getElementById('applicationForm');
+        const successMessage = document.getElementById('successMessage');
+
+        // Listen for when the user clicks the submit button
+        form.addEventListener('submit', function(event) {
+            // Stop the page from reloading/submitting normally
+            event.preventDefault();
+
+            // Hide the form
+            form.classList.add('hidden');
+
+            // Show the success message box
+            successMessage.classList.remove('hidden');
+        });
+    </script>
 </body>
 </html>
